@@ -4,7 +4,7 @@ from telebot import types
 import re
 
 # 🔐 Pega o token do ambiente (definido no Railway)
-TOKEN = '7634578800:AAGZ1gnc_lR4U4n1qiOPpQHgDxirBT1UYN4'
+TOKEN = '8005151469:AAG1GnDUCnxAblNT-dtB7WJKBlI8-9f7D9I'
 bot = telebot.TeleBot(TOKEN)
 
 # 📋 Lista de botões com nomes e comandos
