@@ -13,6 +13,14 @@ comandos = [
     ("Paramount", "/paramount"),
     ("Prime Vídeo", "/primevideo"),
     ("Netflix", "/netflix"),
+    ("Crunchyroll", "/crunchyroll"),
+    ("Disney Plus", "/disneyplus"),
+    ("HBO Max", "/hbomax"),
+    ("Viki Rakuten Plus", "/vikirakutenplus"),
+    ("Mubi", "/mubi"),
+    ("Looke", "/looke"),
+    ("Duolingo", "/duolingo"),
+    ("Kocowa", "/kocowa"),
     ("Grupo VIP WhatsApp", "/grupovip")
 ]
 
@@ -72,6 +80,62 @@ def callback(call):
             "Login: jetflixnet@gmail.com\n"
             "Senha: Gcay1234\n"
             "✅ Conta Premium 4 telas disponível"
+        )
+    elif nome_servico == "crunchyroll":
+        resposta = (
+            "🍣 *Crunchyroll*\n"
+            "Login: crunchyuser@gmail.com\n"
+            "Senha: Gcay1234\n"
+            "✅ Acesso à animação ilimitada"
+        )
+    elif nome_servico == "disneyplus":
+        resposta = (
+            "🏰 *Disney Plus*\n"
+            "Login: disneyuser@gmail.com\n"
+            "Senha: Gcay1234\n"
+            "✅ Acesso total aos clássicos e originais Disney"
+        )
+    elif nome_servico == "hbomax":
+        resposta = (
+            "📽️ *HBO Max*\n"
+            "Login: hbo_user@gmail.com\n"
+            "Senha: Gcay1234\n"
+            "✅ Filmes e séries exclusivos disponíveis"
+        )
+    elif nome_servico == "vikirakutenplus":
+        resposta = (
+            "📱 *Viki Rakuten Plus*\n"
+            "Login: vikiuser@gmail.com\n"
+            "Senha: Gcay1234\n"
+            "✅ Acesso a dramas asiáticos premium"
+        )
+    elif nome_servico == "mubi":
+        resposta = (
+            "🎥 *Mubi*\n"
+            "Login: mubiuser@gmail.com\n"
+            "Senha: Gcay1234\n"
+            "✅ Filmes independentes e exclusivos"
+        )
+    elif nome_servico == "looke":
+        resposta = (
+            "📡 *Looke*\n"
+            "Login: lookeuser@gmail.com\n"
+            "Senha: Gcay1234\n"
+            "✅ Acesso a filmes e séries brasileiros"
+        )
+    elif nome_servico == "duolingo":
+        resposta = (
+            "🗣️ *Duolingo*\n"
+            "Login: duolingo_user@gmail.com\n"
+            "Senha: Gcay1234\n"
+            "✅ Aprenda idiomas de forma divertida!"
+        )
+    elif nome_servico == "kocowa":
+        resposta = (
+            "🎬 *Kocowa*\n"
+            "Login: kocowa_user@gmail.com\n"
+            "Senha: Gcay1234\n"
+            "✅ Dramas coreanos e conteúdos exclusivos"
         )
     elif nome_servico == "grupovip":
         resposta = (
