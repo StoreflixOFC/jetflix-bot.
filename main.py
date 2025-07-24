@@ -8,23 +8,13 @@ bot = telebot.TeleBot(TOKEN)
 
 # 📋 Lista de botões com nomes e comandos
 comandos = [
-    ("Apple TV", "/appletv"),
-    ("YouTube", "/youtube"),
+    ("YT Premium", "/ytpremium"),
     ("Paramount", "/paramount"),
-    ("Prime Vídeo", "/primevideo"),
-    ("Netflix", "/netflix"),
     ("Crunchyroll", "/crunchyroll"),
-    ("Canva Pro", "/canvapro"),
-    ("Spotify", "/spotify"),
-    ("CapCut", "/capcut"),
-    ("Aplicativos Premium", "/aplicativospremium"),
-    ("Listas IPTV", "/listasiptv"),
-    ("IPTV Vitalício", "/iptvvitalicio"),
-    ("Acervo de Logins", "/acervodelogins"),
-    ("Gerador Infinito", "/geradorinfinito"),
-    ("Grupo VIP WhatsApp", "/grupovip"),
-    ("Super Brindes", "/superbrindes"),
-    ("Presentes Grátis", "/presentesgratis")
+    ("Prime Video", "/primevideo"),
+    ("Viki Rakuten Plus", "/vikirakutenplus"),
+    ("Duolingo", "/duolingo"),
+    ("Kocowa", "/kocowa")
 ]
 
 # 📥 Mensagem inicial com botões
@@ -49,121 +39,54 @@ def callback(call):
 
     nome_servico = call.data[1:]
 
-    if nome_servico == "appletv":
+    if nome_servico == "ytpremium":
         resposta = (
-            "🍏 *Apple TV*\n"
-            "Login: storeflix00@icloud.com\n"
-            "Senha: Gcay1234\n"
-            "✅ Acesso premium garantido"
-        )
-    elif nome_servico == "youtube":
-        resposta = (
-            "📺 *YouTube*\n"
-            "Login: storeflix9@gmail.com\n"
-            "Senha: Gcay1234\n"
+            "📺 *YT Premium*\n"
+            "Login: jetflixofx@gmail.com\n"
+            "Senha: Ema@2025\n"
             "✅ YouTube Premium disponível"
         )
     elif nome_servico == "paramount":
         resposta = (
-            "🎞️ *Paramount+*\n"
-            "Login: storeflix9@gmail.com\n"
+            "🎞️ *Paramount*\n"
+            "Login: jetflixofx@gmail.com\n"
             "Senha: Gcay1234\n"
             "📅 Plano ativo"
-        )
-    elif nome_servico == "primevideo":
-        resposta = (
-            "🎬 *Prime Vídeo*\n"
-            "Login: storeflix9@gmail.com ou Seu Telefone\n"
-            "Senha: Gcay1234\n"
-            "✅ Plano familiar disponível"
-        )
-    elif nome_servico == "netflix":
-        resposta = (
-            "🍿 *Netflix*\n"
-            "Login: jetflixnet@gmail.com\n"
-            "Senha: Gcay1234\n"
-            "✅ Conta Premium 4 telas disponível"
         )
     elif nome_servico == "crunchyroll":
         resposta = (
             "🍣 *Crunchyroll*\n"
-            "Login: crunchyuser@gmail.com\n"
-            "Senha: Gcay1234\n"
+            "Login: 1703fdf1ff41239ac08d0c7390ca6937@firemail.com.br\n"
+            "Senha: 1703fdf1ff41239ac08d0c7390ca6937@firemail.com.br\n"
             "✅ Acesso à animação ilimitada"
         )
-    elif nome_servico == "canvapro":
+    elif nome_servico == "primevideo":
         resposta = (
-            "🎨 *Canva Pro*\n"
-            "Login: canvauser@gmail.com\n"
+            "🎬 *Prime Vídeo*\n"
+            "Login: jetflixofx@gmail.com\n"
             "Senha: Gcay1234\n"
-            "✅ Acesso total ao Canva Pro"
+            "✅ Plano familiar disponível"
         )
-    elif nome_servico == "spotify":
+    elif nome_servico == "vikirakutenplus":
         resposta = (
-            "🎵 *Spotify*\n"
-            "Login: spotifyuser@gmail.com\n"
-            "Senha: Gcay1234\n"
-            "✅ Spotify Premium disponível"
+            "📺 *Viki Rakuten Plus*\n"
+            "Login: fada91fe2c2da10cf53636494c62b71f@firemail.com.br\n"
+            "Senha: fada91fe2c2da10cf53636494c62b71f@firemail.com.br\n"
+            "✅ Acesso completo"
         )
-    elif nome_servico == "capcut":
+    elif nome_servico == "duolingo":
         resposta = (
-            "🎬 *CapCut*\n"
-            "Login: capcutuser@gmail.com\n"
-            "Senha: Gcay1234\n"
-            "✅ Edição de vídeo sem limitações"
+            "📚 *Duolingo*\n"
+            "Login: fada91fe2c2da10cf53636494c62b71f@firemail.com.br\n"
+            "Senha: fada91fe2c2da10cf53636494c62b71f@firemail.com.br\n"
+            "✅ Acesso a cursos premium"
         )
-    elif nome_servico == "aplicativospremium":
+    elif nome_servico == "kocowa":
         resposta = (
-            "📱 *Aplicativos Premium*\n"
-            "Login: appuser@gmail.com\n"
-            "Senha: Gcay1234\n"
-            "✅ Acesso a uma seleção de aplicativos premium"
-        )
-    elif nome_servico == "listasiptv":
-        resposta = (
-            "📡 *Listas IPTV*\n"
-            "Login: iptvuser@gmail.com\n"
-            "Senha: Gcay1234\n"
-            "✅ Acesso às melhores listas IPTV"
-        )
-    elif nome_servico == "iptvvitalicio":
-        resposta = (
-            "🌍 *IPTV Vitalício*\n"
-            "Login: iptvlifeuser@gmail.com\n"
-            "Senha: Gcay1234\n"
-            "✅ Acesso IPTV vitalício garantido"
-        )
-    elif nome_servico == "acervodelogins":
-        resposta = (
-            "📚 *Acervo de Logins*\n"
-            "Login: acervouser@gmail.com\n"
-            "Senha: Gcay1234\n"
-            "✅ Acesso ao acervo completo de logins"
-        )
-    elif nome_servico == "geradorinfinito":
-        resposta = (
-            "🔄 *Gerador Infinito*\n"
-            "Login: geradoruser@gmail.com\n"
-            "Senha: Gcay1234\n"
-            "✅ Gerador infinito de contas premium"
-        )
-    elif nome_servico == "grupovip":
-        resposta = (
-            "💬 *GRUPO VIP WHATSAPP*\n"
-            "Participe agora do nosso grupo exclusivo no WhatsApp!\n"
-            "👉 [Clique aqui para entrar](https://chat.whatsapp.com/JWZeb7hkSF255MqmqPVRSW)"
-        )
-    elif nome_servico == "superbrindes":
-        resposta = (
-            "🎁 *Super Brindes*\n"
-            "Aproveite ofertas exclusivas de brindes grátis!\n"
-            "👉 [Clique aqui para garantir seu brinde](https://jetflix.site)"
-        )
-    elif nome_servico == "presentesgratis":
-        resposta = (
-            "🎁 *PRESENTES GRÁTIS*\n"
-            "Acesse presentes exclusivos e gratuitos!\n"
-            "👉 [Clique aqui para receber seu presente grátis](https://jetflix.site)"
+            "📺 *Kocowa*\n"
+            "Login: fada91fe2c2da10cf53636494c62b71f@firemail.com.br\n"
+            "Senha: Xinespreto123@\n"
+            "✅ Acesso a dramas asiáticos"
         )
     else:
         resposta = f"🔐 Gerando conta para: *{nome_servico.upper()}*..."
