@@ -1,6 +1,7 @@
 import os
 import telebot
 from telebot import types
+import re
 
 # 🔐 Pega o token do ambiente (definido no Railway)
 TOKEN = '7634578800:AAGZ1gnc_lR4U4n1qiOPpQHgDxirBT1UYN4'
@@ -16,6 +17,15 @@ comandos = [
     ("Duolingo", "/duolingo"),
     ("Kocowa", "/kocowa")
 ]
+
+# Função para verificar links maliciosos
+def is_malicious_link(text):
+    # Lista de palavras-chave que podem indicar links maliciosos
+    malicious_patterns = ["freeether.net", "ethereum", "airdrops", "cryptogifts", "free", "claim"]
+    for pattern in malicious_patterns:
+        if re.search(pattern, text, re.IGNORECASE):
+            return True
+    return False
 
 # 📥 Mensagem inicial com botões
 @bot.message_handler(commands=['start'])
@@ -38,6 +48,9 @@ def callback(call):
         pass
 
     nome_servico = call.data[1:]
+
+    # Defina a resposta padrão
+    resposta = ""
 
     if nome_servico == "ytpremium":
         resposta = (
@@ -90,6 +103,11 @@ def callback(call):
         )
     else:
         resposta = f"🔐 Gerando conta para: *{nome_servico.upper()}*..."
+
+    # Verifique se a resposta contém links maliciosos
+    if is_malicious_link(resposta):
+        bot.send_message(call.message.chat.id, "🚨 Detectado link malicioso! Não podemos enviar informações suspeitas.")
+        return
 
     bot.send_message(call.message.chat.id, resposta, parse_mode='Markdown', disable_web_page_preview=True)
 
