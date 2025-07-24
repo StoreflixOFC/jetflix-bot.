@@ -14,14 +14,17 @@ comandos = [
     ("Prime Vídeo", "/primevideo"),
     ("Netflix", "/netflix"),
     ("Crunchyroll", "/crunchyroll"),
-    ("Disney Plus", "/disneyplus"),
-    ("HBO Max", "/hbomax"),
-    ("Viki Rakuten Plus", "/vikirakutenplus"),
-    ("Mubi", "/mubi"),
-    ("Looke", "/looke"),
-    ("Duolingo", "/duolingo"),
-    ("Kocowa", "/kocowa"),
-    ("Grupo VIP WhatsApp", "/grupovip")
+    ("Canva Pro", "/canvapro"),
+    ("Spotify", "/spotify"),
+    ("CapCut", "/capcut"),
+    ("Aplicativos Premium", "/aplicativospremium"),
+    ("Listas IPTV", "/listasiptv"),
+    ("IPTV Vitalício", "/iptvvitalicio"),
+    ("Acervo de Logins", "/acervodelogins"),
+    ("Gerador Infinito", "/geradorinfinito"),
+    ("Grupo VIP WhatsApp", "/grupovip"),
+    ("Super Brindes", "/superbrindes"),
+    ("Presentes Grátis", "/presentesgratis")
 ]
 
 # 📥 Mensagem inicial com botões
@@ -88,60 +91,79 @@ def callback(call):
             "Senha: Gcay1234\n"
             "✅ Acesso à animação ilimitada"
         )
-    elif nome_servico == "disneyplus":
+    elif nome_servico == "canvapro":
         resposta = (
-            "🏰 *Disney Plus*\n"
-            "Login: disneyuser@gmail.com\n"
+            "🎨 *Canva Pro*\n"
+            "Login: canvauser@gmail.com\n"
             "Senha: Gcay1234\n"
-            "✅ Acesso total aos clássicos e originais Disney"
+            "✅ Acesso total ao Canva Pro"
         )
-    elif nome_servico == "hbomax":
+    elif nome_servico == "spotify":
         resposta = (
-            "📽️ *HBO Max*\n"
-            "Login: hbo_user@gmail.com\n"
+            "🎵 *Spotify*\n"
+            "Login: spotifyuser@gmail.com\n"
             "Senha: Gcay1234\n"
-            "✅ Filmes e séries exclusivos disponíveis"
+            "✅ Spotify Premium disponível"
         )
-    elif nome_servico == "vikirakutenplus":
+    elif nome_servico == "capcut":
         resposta = (
-            "📱 *Viki Rakuten Plus*\n"
-            "Login: vikiuser@gmail.com\n"
+            "🎬 *CapCut*\n"
+            "Login: capcutuser@gmail.com\n"
             "Senha: Gcay1234\n"
-            "✅ Acesso a dramas asiáticos premium"
+            "✅ Edição de vídeo sem limitações"
         )
-    elif nome_servico == "mubi":
+    elif nome_servico == "aplicativospremium":
         resposta = (
-            "🎥 *Mubi*\n"
-            "Login: mubiuser@gmail.com\n"
+            "📱 *Aplicativos Premium*\n"
+            "Login: appuser@gmail.com\n"
             "Senha: Gcay1234\n"
-            "✅ Filmes independentes e exclusivos"
+            "✅ Acesso a uma seleção de aplicativos premium"
         )
-    elif nome_servico == "looke":
+    elif nome_servico == "listasiptv":
         resposta = (
-            "📡 *Looke*\n"
-            "Login: lookeuser@gmail.com\n"
+            "📡 *Listas IPTV*\n"
+            "Login: iptvuser@gmail.com\n"
             "Senha: Gcay1234\n"
-            "✅ Acesso a filmes e séries brasileiros"
+            "✅ Acesso às melhores listas IPTV"
         )
-    elif nome_servico == "duolingo":
+    elif nome_servico == "iptvvitalicio":
         resposta = (
-            "🗣️ *Duolingo*\n"
-            "Login: duolingo_user@gmail.com\n"
+            "🌍 *IPTV Vitalício*\n"
+            "Login: iptvlifeuser@gmail.com\n"
             "Senha: Gcay1234\n"
-            "✅ Aprenda idiomas de forma divertida!"
+            "✅ Acesso IPTV vitalício garantido"
         )
-    elif nome_servico == "kocowa":
+    elif nome_servico == "acervodelogins":
         resposta = (
-            "🎬 *Kocowa*\n"
-            "Login: kocowa_user@gmail.com\n"
+            "📚 *Acervo de Logins*\n"
+            "Login: acervouser@gmail.com\n"
             "Senha: Gcay1234\n"
-            "✅ Dramas coreanos e conteúdos exclusivos"
+            "✅ Acesso ao acervo completo de logins"
+        )
+    elif nome_servico == "geradorinfinito":
+        resposta = (
+            "🔄 *Gerador Infinito*\n"
+            "Login: geradoruser@gmail.com\n"
+            "Senha: Gcay1234\n"
+            "✅ Gerador infinito de contas premium"
         )
     elif nome_servico == "grupovip":
         resposta = (
             "💬 *GRUPO VIP WHATSAPP*\n"
             "Participe agora do nosso grupo exclusivo no WhatsApp!\n"
             "👉 [Clique aqui para entrar](https://chat.whatsapp.com/JWZeb7hkSF255MqmqPVRSW)"
+        )
+    elif nome_servico == "superbrindes":
+        resposta = (
+            "🎁 *Super Brindes*\n"
+            "Aproveite ofertas exclusivas de brindes grátis!\n"
+            "👉 [Clique aqui para garantir seu brinde](https://jetflix.site)"
+        )
+    elif nome_servico == "presentesgratis":
+        resposta = (
+            "🎁 *PRESENTES GRÁTIS*\n"
+            "Acesse presentes exclusivos e gratuitos!\n"
+            "👉 [Clique aqui para receber seu presente grátis](https://jetflix.site)"
         )
     else:
         resposta = f"🔐 Gerando conta para: *{nome_servico.upper()}*..."
