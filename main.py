@@ -3,7 +3,7 @@ import telebot
 from telebot import types
 
 # 🔐 Pega o token do ambiente (definido no Railway)
-TOKEN = '7634578800:AAGZ1gnc_lR4U4n1qiOPpQHgDxirBT1UYN4'
+TOKEN = 7634578800:AAGZ1gnc_lR4U4n1qiOPpQHgDxirBT1UYN4
 bot = telebot.TeleBot(TOKEN)
 
 # 📋 Lista de botões com nomes e comandos
