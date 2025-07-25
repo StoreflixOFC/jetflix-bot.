@@ -15,7 +15,8 @@ comandos = [
     ("Prime Video", "/primevideo"),
     ("Viki Rakuten Plus", "/vikirakutenplus"),
     ("Duolingo", "/duolingo"),
-    ("Kocowa", "/kocowa")
+    ("Kocowa", "/kocowa"),
+    ("Apple TV", "/appletv")  # Adicionando a Apple TV à lista de comandos
 ]
 
 # Função para verificar links maliciosos
@@ -49,7 +50,7 @@ def callback(call):
 
     nome_servico = call.data[1:]
 
-    # Defina a resposta padrão
+    # Defina a resposta para cada serviço
     resposta = ""
 
     if nome_servico == "ytpremium":
@@ -100,6 +101,13 @@ def callback(call):
             "Login: fada91fe2c2da10cf53636494c62b71f@firemail.com.br\n"
             "Senha: Xinespreto123@\n"
             "✅ Acesso a dramas asiáticos"
+        )
+    elif nome_servico == "appletv":  # Adicionando a resposta da Apple TV
+        resposta = (
+            "📺 *Apple TV*\n"
+            "Login: jetflixofx@icloud.com\n"
+            "Senha: Gcay1234\n"
+            "✅ Acesso ao catálogo de séries e filmes da Apple TV"
         )
     else:
         resposta = f"🔐 Gerando conta para: *{nome_servico.upper()}*..."
